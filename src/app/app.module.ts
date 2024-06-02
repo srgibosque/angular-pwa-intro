@@ -3,8 +3,10 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ImageComponent } from './component/image/image.component';
-import { ImagesComponent } from './component/images/images.component';
+import { ImageComponent } from './components/image/image.component';
+import { ImagesComponent } from './components/images/images.component';
+import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ImagesComponent } from './component/images/images.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot([]),
+    HttpClientModule,
   ],
   providers: [
     provideClientHydration()
