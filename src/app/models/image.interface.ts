@@ -4,5 +4,5 @@ export interface Image {
   width: number;
   height: number;
   url: string;
-  downloadUrl: string;
+  download_url: string;
 }

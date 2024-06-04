@@ -1,1 +1,15 @@
-<p>image works!</p>
+<div class="container mt-5">
+  <div *ngIf="image" class="row animate_animated animate_bounce animate_fadeIn">
+    <div class="col-md-9">
+      <p><strong>Identifier: </strong>{{image.id}}</p>
+      <p><strong>Author: </strong>{{image.author}}</p>
+      <p><strong>Size: </strong>{{image.width}} - {{image.height}} px</p>
+      <p><strong>Url: </strong>{{image.url}}</p>
+      <img src="{{image.download_url}}" alt="image" class="rounded">
+    </div>
+
+    <div class="col-md-3">
+      <a routerLink="/" class="btn btn-danger">Back</a>
+    </div>
+  </div>
+</div>
